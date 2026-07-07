@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 import java.time.Duration;
 
-public class :DriverSetup {
+public class DriverSetup {
 
     protected WebDriver driver;
 
