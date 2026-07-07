@@ -14,7 +14,6 @@ public class DriverSetupTest extends DriverSetup{
 
     @AfterClass
     public void closeBrowser(){
-
         tearDown();
 
     }

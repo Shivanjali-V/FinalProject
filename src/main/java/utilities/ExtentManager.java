@@ -12,7 +12,7 @@ public class ExtentManager {
         if(extent == null) {
 
             ExtentSparkReporter spark =
-                    new ExtentSparkReporter("C:/Users/2497740/Downloads/HackathonProject/HackathonProject/Reports/ExtentReport.html");
+                    new ExtentSparkReporter("C:/Users/2497740/IdeaProjects/FinalProject/Reports/ExtentReport.html");
 
             spark.config().setDocumentTitle("Automation Report");
             spark.config().setReportName("Regression Suite");
