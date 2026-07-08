@@ -25,7 +25,8 @@ public class UsedCarsPage {
     public void navigateToUsedCars(){
 
         String hoverMoreMenu = LocatorReader.getMoreMenu();
-        WebElement ele = driver.findElement(By.xpath(hoverMoreMenu));
+        WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement ele =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(hoverMoreMenu)));
         Actions act = new Actions(driver);
         act.moveToElement(ele).perform();
 
