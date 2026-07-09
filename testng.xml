@@ -15,12 +15,12 @@
         </classes>
     </test>
 
-    <!-- <test name="Edge Tests">
+    <test name="Edge Tests">
         <parameter name="browser" value="edge"/>
         <classes>
             <class name="tests.NewBikeTest"/>
             <class name="tests.UsedCarsTest"/>
             <class name="tests.LoginTest"/>
         </classes>
-    </test> -->
+    </test>
 </suite>
