@@ -15,8 +15,10 @@ public class HomePage {
     }
 
     public void navigateToUpcomingBikes(){
-        String newBikes = LocatorReader.getNewBikes();
-        WebElement ele = driver.findElement(By.xpath(newBikes));
+        String newBikes = LocatorReader.getNewBikes(); 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(newBikes)));
+
         Actions act = new Actions(driver);
         act.moveToElement(ele).perform();
 
