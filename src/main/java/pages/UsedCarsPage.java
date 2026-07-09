@@ -44,7 +44,7 @@ public class UsedCarsPage {
         String popularModels = LocatorReader.getPopularModel();
         WebElement ele = driver.findElement(By.xpath(popularModels));
         js = (JavascriptExecutor)driver;
-        String scrollIntoCenterScript = JavascriptExecutorUtils.getScrollIntoCenterScript();
+        String scrollIntoCenterScript = JavascriptExecutorUtils.SCROLL_INTO_CENTER;
         js.executeScript(scrollIntoCenterScript, ele);
 
     }
@@ -52,14 +52,14 @@ public class UsedCarsPage {
     public void selectAllOptions() throws InterruptedException {
         Thread.sleep(3000);
         js = (JavascriptExecutor)driver;
-        String scrollBy = JavascriptExecutorUtils.getScrollBy(0,500);
+        String scrollBy = JavascriptExecutorUtils.ScrollBy(0,500);
         js.executeScript(scrollBy);
         String checkBoxList = LocatorReader.getCheckBoxList();
         List<WebElement> checkboxes = driver.findElements(By.xpath(checkBoxList));
 
         for(WebElement checkbox : checkboxes) {
             js.executeScript(scrollBy);
-            String clickScript = JavascriptExecutorUtils.getClickScript();
+            String clickScript = JavascriptExecutorUtils.CLICK;
             js.executeScript(clickScript,checkbox);
         }
 
@@ -67,7 +67,7 @@ public class UsedCarsPage {
 
     public List<WebElement> getCarList() throws InterruptedException {
         js = (JavascriptExecutor)driver;
-        String scrollToBottom = JavascriptExecutorUtils.getScrollToBottom();
+        String scrollToBottom = JavascriptExecutorUtils.SCROLL_TO_BOTTOM;
         js.executeScript(scrollToBottom);
         Thread.sleep(3000);
         String carList = LocatorReader.getCarList();
@@ -80,7 +80,7 @@ public class UsedCarsPage {
                 break;
             }
             previousCount = currentCount;
-            String scrollIntoViewTrue = JavascriptExecutorUtils.getScrollIntoViewTrue();
+            String scrollIntoViewTrue = JavascriptExecutorUtils.SCROLL_INTO_VIEW_TRUE;
             js.executeScript(scrollIntoViewTrue, elements.getLast());
             Thread.sleep(5000);
         }

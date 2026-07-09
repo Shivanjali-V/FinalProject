@@ -32,7 +32,7 @@ public class LoginPage {
         String googleBtn = LocatorReader.getGoogleBtn();
         WebElement gb = driver.findElement(By.xpath(googleBtn));
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        String clickScript = JavascriptExecutorUtils.getClickScript();
+        String clickScript = JavascriptExecutorUtils.CLICK;
         js.executeScript(clickScript,gb);
     }
 

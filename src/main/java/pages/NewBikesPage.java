@@ -33,10 +33,10 @@ public class NewBikesPage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement ele = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(brandName)));
         js = (JavascriptExecutor) driver;
-        scrollIntoCenterScript = JavascriptExecutorUtils.getScrollIntoCenterScript();
+        scrollIntoCenterScript = JavascriptExecutorUtils.SCROLL_INTO_CENTER;
         js.executeScript(scrollIntoCenterScript, ele);
         Thread.sleep(2000);
-        clickScript = JavascriptExecutorUtils.getClickScript();
+        clickScript = JavascriptExecutorUtils.CLICK;
         js.executeScript(clickScript, ele);
 
     }
@@ -45,10 +45,10 @@ public class NewBikesPage {
         String filter = LocatorReader.getUnder5Lakhs();
         WebElement ele = driver.findElement(By.xpath(filter));
         js = (JavascriptExecutor) driver;
-        scrollIntoCenterScript = JavascriptExecutorUtils.getScrollIntoCenterScript();
+        scrollIntoCenterScript = JavascriptExecutorUtils.SCROLL_INTO_CENTER;
         js.executeScript(scrollIntoCenterScript, ele);
         Thread.sleep(2000);
-        clickScript = JavascriptExecutorUtils.getClickScript();
+        clickScript = JavascriptExecutorUtils.CLICK;
         js.executeScript(clickScript, ele);
     }
 
